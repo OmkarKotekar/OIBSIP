@@ -1,0 +1,27 @@
+.calculator {
+    width: 500px;
+}
+
+.buttons .btn {
+    margin: 5px;
+    height: 60px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.display {
+    min-height: 70px;
+}
+
+footer {
+    background-color: black; 
+    color: white; 
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #dee2e6;
+    font-size: 0.9rem; 
+    font-weight: 500; 
+}

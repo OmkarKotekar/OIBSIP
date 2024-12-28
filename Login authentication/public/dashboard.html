@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="welcome-message">Welcome!</h2>
+        <div class="cards">
+            <div class="card" onclick="alert('Feature Coming Soon!')">
+                <h3>View Profile</h3>
+                <p>Manage and update your details</p>
+            </div>
+            <div class="card" onclick="alert('Feature Coming Soon!')">
+                <h3>Analytics</h3>
+                <p>Check your stats and progress</p>
+            </div>
+            <div class="card" onclick="alert('Feature Coming Soon!')">
+                <h3>Settings</h3>
+                <p>Adjust your preferences</p>
+            </div>
+            <div class="card" onclick="alert('Feature Coming Soon!')">
+                <h3>Help</h3>
+                <p>Contact support or read FAQs</p>
+            </div>
+        </div>
+        <button id="logout-btn">Logout</button>
+    </div>
+    <script>
+        const loggedInUser = localStorage.getItem('loggedInUser');
+        if (!loggedInUser) {
+            alert('Please login or register first!');
+            window.location.href = 'index.html';
+        } else {
+            document.getElementById('welcome-message').innerText = `Welcome, ${loggedInUser}!`;
+        }
+
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
